@@ -83,7 +83,7 @@
 }
 .SignUp__btn:hover {
   -fx-background-color: #ff7301;
-  -fx-text-fill: #defee6;
+  -fx-text-fill: #f3a807;
 }
 
 .form__member {
@@ -123,11 +123,11 @@
   -fx-background-color: rgba(29, 1, 190, 0.5);
 }
 .google-btn:hover .google-btn__text {
-  -fx-fill: #defee6;
+  -fx-fill: #f3a807;
 }
 
 .dash__container-card {
-  -fx-background-color: #000000;
+  -fx-background-color: #ffd448;
   -fx-background-radius: 30px;
   -fx-border-radius: 30px;
 }
@@ -139,7 +139,7 @@
 }
 
 .userTableHead {
-  -fx-background-color: #defee6;
+  -fx-background-color: #f3a807;
   -fx-background-radius: 35px 35px 0 0;
   -fx-padding: 0 15px;
 }
@@ -202,11 +202,11 @@
   -fx-cursor: hand;
 }
 .userItem__btn:hover {
-  -fx-background-color: #defee6;
+  -fx-background-color: #e7924d;
 }
 
 .updateUserModel {
-  -fx-background-color: rgba(0, 0, 0, 0.7);
+  -fx-background-color: #ffffff;
 }
 
 .updateUserModel-card {
@@ -275,7 +275,7 @@
 
 .changePass__btn {
   -fx-font-size: 15px;
-  -fx-background-color: #defee6;
+  -fx-background-color: #f3a807;
   -fx-padding: 10px 20px;
   -fx-text-fill: #ff7301;
   -fx-font-weight: 800;
@@ -286,7 +286,7 @@
 }
 .changePass__btn:hover {
   -fx-background-color: #ff7301;
-  -fx-text-fill: #defee6;
+  -fx-text-fill: #f3a807;
 }
 
 .balance__card {
@@ -296,7 +296,7 @@
   -fx-border-radius: 30px;
 }
 .balance__card--2 {
-  -fx-background-color: rgba(238, 107, 0, 0.829);
+  -fx-background-color: rgba(47, 0, 255, 0.829);
 }
 .balance__card__title {
   -fx-fill: #10036a;
@@ -376,5 +376,5 @@
 }
 .fundItem__btn:hover {
   -fx-background-color: #1d13a8;
-  -fx-text-fill: #defee6;
+  -fx-text-fill: #f3a807;
 } /*# sourceMappingURL=nabilStyle.css.map */

@@ -5,6 +5,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import BookIt.bookit;
 import entities.User;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -27,7 +28,6 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import services.UserService;
 import utils.UserSession;
-import zerowaste.ZeroWaste;
 
 /**
  * FXML Controller class
@@ -130,7 +130,7 @@ public class AdminDashboardController implements Initializable {
     @FXML
     private void open_dashboard(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("AdminDashboard.fxml"));
-        ZeroWaste.stage.getScene().setRoot(root);
+        bookit.stage.getScene().setRoot(root);
     }
 
     @FXML

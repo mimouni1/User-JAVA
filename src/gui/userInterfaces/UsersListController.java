@@ -81,11 +81,11 @@ public class UsersListController implements Initializable {
             VBox updateUserform;
             try {
                 updateUserform = fxmlLoader1.load();
-                //UpdateUserCardController updateUserCardController = fxmlLoader1.getController();
-                //UpdateUserCardController.setFxmlToLoad("UsersList.fxml");
+                UpdateUserCardController updateUserCardController = fxmlLoader1.getController();
+                UpdateUserCardController.setFxmlToLoad("UsersList.fxml");
                 userToUpdate = userService.getOneUser(userEmailToUpdate);
 
-                //updateUserCardController.setUserUpdateData(userToUpdate);
+                updateUserCardController.setUserUpdateData(userToUpdate);
                 updateUserModelContent.getChildren().add(updateUserform);
             } catch (IOException e) {
                 e.printStackTrace();

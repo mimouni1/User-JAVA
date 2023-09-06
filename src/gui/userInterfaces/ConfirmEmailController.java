@@ -48,7 +48,7 @@ public class ConfirmEmailController implements Initializable {
             currentUser.setIsVerified(true);
             UserService userService = new UserService();
             try {
-                userService.update(currentUser);
+                userService.verifyAccount(currentUser);
 
                 TrayNotificationAlert.notif("sign Up", "email verified successfully.",
                         NotificationType.SUCCESS, AnimationType.POPUP, Duration.millis(2500));

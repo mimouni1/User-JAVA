@@ -3,23 +3,37 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
 
 <Pane fx:id="userPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1084.0" styleClass="dash__container-card" stylesheets="@../../assets/style/nabilStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.userInterfaces.CodePromoListController">
    <children>
+   <HBox fx:id="codepromoBtn" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#generatePromoCode"  prefHeight="50.0" prefWidth="200.0">
+               <children>       
+                  <Label fx:id="codepromoText" text="Generate a promo code" textFill="WHITE">
+                     <font>
+                        <Font name="Montserrat Regular" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="nav-links" />
+                  <String fx:value="activeLink" />
+               </styleClass>
+            </HBox>
       <HBox alignment="CENTER_LEFT" layoutX="28.0" layoutY="18.0" prefHeight="74.0" prefWidth="1033.0">
          <children>
-            <Text fx:id="userListTitle" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user_list--title" text="Users List">
+            
+            <Text fx:id="userListTitle" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user_list--title" text="PromoCodes List">
                <HBox.margin>
                   <Insets right="550.0" />
                </HBox.margin></Text>
-            <Text fill="#97d158" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sort-text" text="Sort by:">
+            <Text fill="#ff6f00" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sort-text" text="Sort by:">
                <HBox.margin>
                   <Insets right="25.0" />
                </HBox.margin>

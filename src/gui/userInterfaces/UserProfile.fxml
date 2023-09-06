@@ -32,7 +32,7 @@
       </HBox>
       <AnchorPane layoutX="298.0" layoutY="142.0" prefHeight="453.0" prefWidth="641.0" styleClass="profileContainer">
          <stylesheets>
-            <URL value="@../../../../zeroWaste-javaFX_old09_04/src/assets/style/nabilStyle.css" />
+            <URL value="@../../../../Bookit-javaFX_old09_04/src/assets/style/nabilStyle.css" />
             <URL value="@../../assets/style/nabilStyle.css" />
          </stylesheets>
          <children>

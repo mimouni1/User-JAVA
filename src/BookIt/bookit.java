@@ -1,4 +1,4 @@
-package zerowaste;
+package BookIt;
 
 import java.io.IOException;
 import javafx.application.Application;
@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-public class ZeroWaste extends Application {
+public class bookit extends Application {
 
     public static Stage stage = null;
 
@@ -24,7 +24,7 @@ public class ZeroWaste extends Application {
             primaryStage.getIcons().add(new Image("/assets/img/logo.png"));
             primaryStage.setTitle("Book IT");
             primaryStage.setScene(scene);
-            ZeroWaste.stage = primaryStage;
+            bookit.stage = primaryStage;
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();

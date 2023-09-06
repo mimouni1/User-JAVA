@@ -1,7 +1,6 @@
 package services;
 
 import entities.CodePromo;
-import entities.User;
 import utils.MyDB;
 import java.sql.Connection;
 import java.sql.Date;
@@ -87,28 +86,29 @@ public class CodePromoService {
         return codePromos;
     }
     
-    public CodePromo readById(int id) {
-        CodePromo b = new CodePromo();
+    public CodePromo readByCode(String code) {
+        CodePromo b = null;
         
- 
         try {
-           
-            String req = "SELECT * FROM code_promo WHERE id= "+id;
-            Statement st = cnx.createStatement();
-            ResultSet rs = st.executeQuery(req);
-            rs.beforeFirst();
-            rs.next();
-            b.setId(rs.getInt(1));
-            b.setCode(rs.getString(2));
-            b.setDate_debut((Date)rs.getDate(3));
-            b.setDate_fin((Date)rs.getDate(4));
-           
+            String req = "SELECT * FROM code_promo WHERE code=?";
+            PreparedStatement preparedStatement = cnx.prepareStatement(req);
+            preparedStatement.setString(1, code);
+            
+            ResultSet rs = preparedStatement.executeQuery();
+            
+            if (rs.next()) {
+                // Code exists in the database
+                b = new CodePromo();
+                b.setId(rs.getInt(1));
+                b.setCode(rs.getString(2));
+                b.setDate_debut(rs.getDate(3));
+                b.setDate_fin(rs.getDate(4));
+            }
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
         
         return b;
-    
     }
     public ArrayList<CodePromo> sortBy(String nom_column, String Asc_Dsc) {
         ArrayList<CodePromo> codePromos = new ArrayList<>();

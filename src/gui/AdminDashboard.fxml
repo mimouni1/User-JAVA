@@ -29,13 +29,10 @@
                <children>
                   <HBox fx:id="dashboardBtn" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_dashboard" onMousePressed="#open_dashboard" prefHeight="50.0" prefWidth="200.0">
                      <children>
-                        <ImageView fx:id="dashboardIcon" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="dashboardIcon" fitHeight="18.0" fitWidth="20.0">
                            <image>
-                              <Image url="@../assets/img/menu-active.png" />
+                              <Image url="@../assets/img/dashboardIcon.png" />
                            </image>
-                           <HBox.margin>
-                              <Insets right="25.0" />
-                           </HBox.margin>
                         </ImageView>
                         <Label fx:id="dashboardText" text="Dashboard" textFill="WHITE">
                            <font>
@@ -55,60 +52,57 @@
                         <String fx:value="activeLink" />
                      </styleClass>
                   </HBox>
-                  <HBox fx:id="usersBtn" alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" onMouseClicked="#open_usersList" prefHeight="50.0" prefWidth="200.0" styleClass="nav-links">
+                  <HBox prefHeight="20.0" prefWidth="220.0" />
+                  <HBox fx:id="usersBtn" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_usersList" onMousePressed="#open_usersList" prefHeight="50.0" prefWidth="200.0">
                      <children>
                         <ImageView fx:id="usersIcon">
                            <image>
                               <Image url="@../assets/img/fullnameIcon.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
-                        <Label fx:id="usersText" styleClass="text" text="Users" textFill="WHITE">
+                        <Label fx:id="usersText" text="  Users" textFill="WHITE">
                            <font>
                               <Font name="Montserrat Regular" size="14.0" />
                            </font>
+                           <styleClass>
+                              <String fx:value="text" />
+                              <String fx:value="activeText" />
+                           </styleClass>
                         </Label>
-                        <ImageView fx:id="usersIcon" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../assets/img/user.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets right="25.0" />
-                           </HBox.margin>
-                        </ImageView>
                      </children>
                      <padding>
                         <Insets left="20.0" />
                      </padding>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="nav-links" />
+                        <String fx:value="activeLink" />
+                     </styleClass>
                   </HBox>
-                  <HBox fx:id="codepromoBtn" alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="200.0" onMouseClicked="#open_codeList" styleClass="nav-links">
-                     <padding>
-                        <Insets left="20.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
+                  <HBox prefHeight="20.0" prefWidth="220.0" />
+                  <HBox fx:id="codepromoBtn" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_codeList" onMousePressed="#open_codeList" prefHeight="50.0" prefWidth="200.0">
                      <children>
-                        <ImageView fx:id="codepromoIcon" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="codepromoIcon" fitHeight="23.0" fitWidth="17.0">
                            <image>
-                              <Image url="@../assets/img/shopping-cart.png" />
+                              <Image url="@../assets/img/promo-code.png" />
                            </image>
-                           <HBox.margin>
-                              <Insets right="25.0" />
-                           </HBox.margin>
                         </ImageView>
-                        <Label fx:id="CodeText" styleClass="text" text="Code Promo" textFill="WHITE">
+                        <Label fx:id="codepromoText" text="  Code Promo" textFill="WHITE">
                            <font>
                               <Font name="Montserrat Regular" size="14.0" />
                            </font>
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="text" />
+                              <String fx:value="activeText" />
+                           </styleClass>
                         </Label>
                      </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="nav-links" />
+                        <String fx:value="activeLink" />
+                     </styleClass>
                   </HBox>
                </children>
             </VBox>

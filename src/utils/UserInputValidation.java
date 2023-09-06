@@ -156,7 +156,7 @@ public class UserInputValidation {
         }
 
         if (user.getId() == -999) {
-            TrayNotificationAlert.notif("Forgot password", "email not associated with zeroWaste account",
+            TrayNotificationAlert.notif("Forgot password", "email not associated with bookit account",
                     NotificationType.WARNING, AnimationType.POPUP, Duration.millis(2500));
 
             return false;

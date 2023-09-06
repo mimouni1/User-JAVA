@@ -111,12 +111,12 @@ public class LogInController implements Initializable {
                     if (!user.getState()) {
                         TrayNotificationAlert.notif("Login", "Your account is blocked.",
                         NotificationType.ERROR, AnimationType.POPUP, Duration.millis(2500));
-                        System.out.println(user.getIsVerified());
+
+                        return;
                     } else if (user.getIsVerified()) {
                         TrayNotificationAlert.notif("Login", "logged in successfully.",
                                 NotificationType.SUCCESS, AnimationType.POPUP, Duration.millis(2500));
                         UserSession.getInstance().setEmail(user.getEmail());
-                        System.out.println("to the DASHBOARD");
                         
                         if (user.getRoles().equals("[\"ROLE_USER\"]"))
                                {
@@ -133,8 +133,7 @@ public class LogInController implements Initializable {
                             stage.setScene(scene);
                             stage.show();
                         }
-                    }  else {
-
+                    }  else if (!user.getIsVerified()) {
                         Map<String, String> data = new HashMap<>();
                         data.put("emailSubject", "Confirm your email address for Book IT");
                         data.put("titlePlaceholder", "Confirm Your Email Address");
@@ -142,15 +141,16 @@ public class LogInController implements Initializable {
 
                         SendMail.send(user, data);
 
-                        TrayNotificationAlert.notif("Login", "Please verify your email.",
-                                NotificationType.WARNING, AnimationType.POPUP, Duration.millis(2500));
-
                         UserSession.getInstance().setEmail(user.getEmail());
                         Parent root = FXMLLoader.load(getClass().getResource("ConfirmEmail.fxml"));
                         Scene scene = new Scene(root);
                         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                         stage.setScene(scene);
                         stage.show();
+
+                        TrayNotificationAlert.notif("Login", "Please verify your email.",
+                                NotificationType.WARNING, AnimationType.POPUP, Duration.millis(2500));
+                        
                      }
                 } else {
                     TrayNotificationAlert.notif("Login", "Invalid credentials.",
@@ -163,13 +163,6 @@ public class LogInController implements Initializable {
         } catch (MessagingException e) {
             e.printStackTrace();
         }
-
-        UserSession.getInstance().setEmail("java@gmail.com");
-        Parent root = FXMLLoader.load(getClass().getResource("ConfirmEmail.fxml"));
-        Scene scene = new Scene(root);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
     }
 
     @FXML

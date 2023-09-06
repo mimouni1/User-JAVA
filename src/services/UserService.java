@@ -42,7 +42,7 @@ public class UserService implements IUserService {
     }
 
      public void update(User user) throws SQLException {
-        String req = "UPDATE `user` SET `password`=?,`name`=?,`lastname`=?,`tel`=?,`img_url`=?,`token`=?,`fb_link`=?,`twitter_link`=?,`insta_link`=?,`verification_code`=? WHERE email=?";
+        String req = "UPDATE `user` SET `password`=?,`name`=?,`lastname`=?,`tel`=?,`img_url`=?, `token`=?,`fb_link`=?,`twitter_link`=?,`insta_link`=?,`verification_code`=? WHERE email=?";
 
         PreparedStatement ps = conx.prepareStatement(req);
         ps.setString(1, user.getPassword());
@@ -56,9 +56,48 @@ public class UserService implements IUserService {
         ps.setString(9, user.getInstaLink());
         ps.setInt(10,user.getVerificationCode());
         ps.setString(11, user.getEmail());
+        
     
         ps.executeUpdate();
         System.out.println("User updated successfully");
+        ps.close();
+    }
+
+    public void verifyAccount(User user) throws SQLException {
+        String req = "UPDATE `user` SET `is_verified`=? WHERE email=?";
+
+        PreparedStatement ps = conx.prepareStatement(req);
+        ps.setBoolean(1, user.getIsVerified());
+        ps.setString(2, user.getEmail());
+        
+    
+        ps.executeUpdate();
+        System.out.println("User Verified successfully");
+        ps.close();
+    }
+
+    public void updateAccountstate(User user) throws SQLException {
+        String req = "UPDATE `user` SET `state`=? WHERE email=?";
+        
+        PreparedStatement ps = conx.prepareStatement(req);
+        ps.setBoolean(1, user.getState());
+        ps.setString(2, user.getEmail());
+        
+    
+        ps.executeUpdate();
+        System.out.println("User updated successfully");
+        ps.close();
+    }
+
+    public void usePromoCode(User user) throws SQLException {
+        String req = "UPDATE `user` SET `code_promo_id`=? WHERE email=?";
+
+        PreparedStatement ps = conx.prepareStatement(req);        
+        ps.setInt(1, user.getPromoCode());
+        ps.setString(2, user.getEmail());
+        
+        ps.executeUpdate();
+        System.out.println("promo code used successfully");
         ps.close();
     }
 

@@ -6,6 +6,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.UUID;
 
+import BookIt.bookit;
 import entities.User;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -32,7 +33,6 @@ import tray.animations.AnimationType;
 import tray.notification.NotificationType;
 import utils.TrayNotificationAlert;
 import utils.UserInputValidation;
-import zerowaste.ZeroWaste;
 import javafx.scene.Node;
 
 public class UpdateUserCardController implements Initializable {
@@ -108,7 +108,6 @@ public class UpdateUserCardController implements Initializable {
         userToUpdate.setFbLink(fbInput.getText());
         userToUpdate.setTwitterLink(twitterInput.getText());
         userToUpdate.setInstaLink(instaInput.getText());
-        userToUpdate.setImgUrl(imageName);
 
         try {
             if (UserInputValidation.updateAccountValidator(userToUpdate)) {
@@ -118,7 +117,7 @@ public class UpdateUserCardController implements Initializable {
 
                 if (FxmlToLoad.equals("UserDashboard.fxml")) {
                     Parent root = FXMLLoader.load(getClass().getResource("/gui/UserDashboard.fxml"));
-                    ZeroWaste.stage.getScene().setRoot(root);
+                    bookit.stage.getScene().setRoot(root);
                 } else {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource(FxmlToLoad));
                     Parent root = loader.load();
@@ -147,10 +146,6 @@ public class UpdateUserCardController implements Initializable {
         fbInput.setText(user.getFbLink());
         twitterInput.setText(user.getTwitterLink());
         instaInput.setText(user.getInstaLink());
-
-        Image image = new Image(getClass().getResource("/assets/userUploads/" + user.getImgUrl()).toExternalForm());
-        imageInput.setImage(image);
-        imageName = user.getImgUrl();
     }
 
     @Override

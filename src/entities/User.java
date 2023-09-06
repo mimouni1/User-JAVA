@@ -17,6 +17,16 @@ public class User {
     private String instaLink;
     private int verificationCode;
     private boolean state;
+    private int codePromo;
+    
+
+    public void setPromoCode(int promoCode) {
+        this.codePromo = promoCode;
+    }
+
+    public int getPromoCode() {
+        return codePromo;
+    }
 
     public User() {
     }
@@ -28,7 +38,7 @@ public class User {
         this.tel = tel;
     }
 
-    public User(String name,String lastname, String email, String tel, String token, String imgUrl,  String password, boolean isVerified) {
+    public User(String name,String lastname, String email, String tel, String token, String imgUrl,  String password, boolean isVerified, int codePromo) {
         this.name = name;
         this.lastname = lastname;
         this.email = email;
@@ -37,6 +47,7 @@ public class User {
         this.imgUrl = imgUrl;
         this.password = password;
         this.isVerified = isVerified; 
+        this.codePromo = codePromo;
     }
 
     public User(String text, String text2, String text3, String text4, String token, String string, String text5 ) {

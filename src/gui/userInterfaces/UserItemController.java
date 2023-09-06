@@ -73,7 +73,7 @@ public class UserItemController {
                 userItemStateLabel.getStyleClass().remove("userItem__field-unactive");
             }
 
-            userItemStateText.setText("active");
+            userItemStateText.setText("Active");
 
             Image stateBtnImg = new Image(
                     getClass().getResource("/assets/img/lock-icon.png").toExternalForm());
@@ -87,7 +87,7 @@ public class UserItemController {
             if (userItemStateLabel.getStyleClass().contains("userItem__field-active")) {
                 userItemStateLabel.getStyleClass().remove("userItem__field-active");
             }
-            userItemStateText.setText("unactive");
+            userItemStateText.setText("Blocked");
 
             Image stateBtnImg = new Image(
                     getClass().getResource("/assets/img/unlock-icon.png").toExternalForm());
@@ -98,8 +98,7 @@ public class UserItemController {
         userItemStateBtn.setOnMouseClicked(event -> {
             System.out.println("user EMAIL: " + user.getEmail());
             try {
-                user.setState(!user.getState());
-                userService.update(user);
+                userService.updateAccountstate(user);
                 updateStateLabel(user);
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -126,9 +125,9 @@ public class UserItemController {
         });
     }
 
-    public void updateStateLabel(User user) {
+    public void updateStateLabel(User user) throws SQLException {
         if (user.getState()) {
-
+            user.setState(false);
             if (!userItemStateLabel.getStyleClass().contains("userItem__field-active")) {
                 userItemStateLabel.getStyleClass().add("userItem__field-active");
             }
@@ -137,13 +136,14 @@ public class UserItemController {
                 userItemStateLabel.getStyleClass().remove("userItem__field-unactive");
             }
 
-            userItemStateText.setText("active");
+            userItemStateText.setText("Active");
 
             Image stateBtnImg = new Image(
                     getClass().getResource("/assets/img/lock-icon.png").toExternalForm());
             userItemStateBtnImg.setImage(stateBtnImg);
 
         } else {
+            user.setState(true);
             if (!userItemStateLabel.getStyleClass().contains("userItem__field-unactive")) {
                 userItemStateLabel.getStyleClass().add("userItem__field-unactive");
             }
@@ -151,7 +151,7 @@ public class UserItemController {
             if (userItemStateLabel.getStyleClass().contains("userItem__field-active")) {
                 userItemStateLabel.getStyleClass().remove("userItem__field-active");
             }
-            userItemStateText.setText("unactive");
+            userItemStateText.setText("Blocked");
 
             Image stateBtnImg = new Image(
                     getClass().getResource("/assets/img/unlock-icon.png").toExternalForm());
