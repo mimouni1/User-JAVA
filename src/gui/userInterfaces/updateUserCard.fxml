@@ -138,14 +138,14 @@
                   <Insets bottom="10.0" />
                </padding>
             </HBox>
-            <TextField fx:id="nameInput" promptText="Fullname" styleClass="product__add-input">
+            <TextField fx:id="nameInput" promptText="name" styleClass="product__add-input">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
             </TextField>
          </children>
       </VBox>
-      <VBox prefHeight="90.0" prefWidth="534.0">
+      <VBox prefHeight="88.0" prefWidth="534.0">
          <padding>
             <Insets left="16.0" right="16.0" />
          </padding>
@@ -167,7 +167,7 @@
                   <Insets bottom="10.0" />
                </padding>
             </HBox>
-            <TextField fx:id="lastnameInput" promptText="Fullname" styleClass="product__add-input" />
+            <TextField fx:id="lastnameInput1" promptText="lastname" styleClass="product__add-input" />
          </children>
          <VBox.margin>
             <Insets />
@@ -260,7 +260,7 @@
             </TextField>
          </children>
       </VBox>
-      <VBox prefHeight="102.0" prefWidth="570.0">
+      <VBox onMouseDragged="#getFxmlToLoad" prefHeight="102.0" prefWidth="570.0">
          <padding>
             <Insets left="16.0" right="16.0" />
          </padding>

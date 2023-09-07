@@ -31,7 +31,7 @@
             </ImageView>
             <VBox maxWidth="-Infinity" minHeight="-Infinity" prefHeight="470.0" prefWidth="65.0" translateY="20.0">
                <children>
-                  <HBox fx:id="dashboardBtn" alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" onMouseClicked="#open_profile" prefHeight="50.0" prefWidth="200.0" styleClass="nav-links">
+                  <HBox fx:id="dashboardBtn" alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" onMouseClicked="#open_dashboard" prefHeight="107.0" prefWidth="64.0" styleClass="nav-links">
                      <padding>
                         <Insets left="20.0" />
                      </padding>
@@ -46,12 +46,7 @@
                         </ImageView>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" onMouseClicked="#open_profile" prefHeight="18.0" prefWidth="64.0" styleClass="nav-links">
-                     <padding>
-                        <Insets left="20.0" />
-                     </padding>
-                  </HBox>
-                  <HBox fx:id="profileBtn" alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" onMouseClicked="#open_profile" prefHeight="50.0" prefWidth="200.0" styleClass="nav-links">
+                  <HBox fx:id="profileBtn" alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" onMouseClicked="#open_profile" prefHeight="101.0" prefWidth="64.0" styleClass="nav-links">
                      <padding>
                         <Insets left="20.0" />
                      </padding>
@@ -149,14 +144,14 @@
                         <Insets right="8.0" />
                      </HBox.margin>
                   </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="home__msg__text" text="Hello Ikbel admin, Are you ready to see the latest upadates ?" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="home__msg__text" text="Hello , Are you ready to see the latest planned trips ?" />
                </children>
             </HBox>
             <HBox layoutX="25.0" layoutY="94.0" prefHeight="136.0" prefWidth="755.0" spacing="60.0">
                <children>
                   <AnchorPane prefHeight="136.0" prefWidth="330.0" styleClass="balance__card" stylesheets="@../assets/style/nabilStyle.css">
                      <children>
-                        <Text layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="balance__card__title" text="11250 person logged in the last 24H" />
+                        <Text layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="balance__card__title" text="You logged 24  times" />
                         <VBox alignment="CENTER_RIGHT" layoutX="74.0" layoutY="71.0" prefHeight="32.0" prefWidth="177.0">
                            <children>
                               <Text fx:id="userPointText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="balance__card__points" />
@@ -171,9 +166,9 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="136.0" prefWidth="288.0" stylesheets="@../assets/style/nabilStyle.css">
                      <children>
-                        <Text layoutX="5.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="balance__card__title" text="New 50 people signed up in the last 4 days" textAlignment="CENTER" wrappingWidth="277.6" />
+                        <Text layoutX="5.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="balance__card__title" text="Discover the BEST reviewed guides" textAlignment="CENTER" wrappingWidth="277.6" />
                         <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
-                        <ImageView fitHeight="71.0" fitWidth="200.0" layoutY="76.0">
+                        <ImageView fitHeight="71.0" fitWidth="200.0" layoutX="25.0" layoutY="71.0">
                            <image>
                               <Image url="@../assets/img/peopleIcon.png" />
                            </image>
@@ -210,7 +205,7 @@
             <AnchorPane layoutX="812.0" layoutY="94.0" prefHeight="509.0" prefWidth="392.0" styleClass="profile__card" stylesheets="@../assets/style/nabilStyle.css">
                <children>
                   <Circle fx:id="circle1" fill="DODGERBLUE" layoutX="47.0" layoutY="47.0" radius="33.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-                  <Text fx:id="navFullname1" layoutX="100.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="profile__card__name" text="Nabil Mersni">
+                  <Text fx:id="navFullname1" layoutX="100.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="profile__card__name" text="Welcome">
                      <font>
                         <Font name="Montserrat Bold" size="18.0" />
                      </font>
@@ -226,7 +221,7 @@
                   </Text>
                   <Circle fill="#03bf8a" layoutX="208.0" layoutY="60.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
                   <Line endX="226.4000244140625" layoutX="83.0" layoutY="106.0" opacity="0.4" stroke="#defee6" strokeLineCap="ROUND" strokeWidth="2.0" />
-                  <Text layoutX="126.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="profile__card__title" text="Donation history" textAlignment="CENTER" />
+                  <Text layoutX="126.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="profile__card__title" text="Your Ticket history" textAlignment="CENTER" />
                   <Line endX="34.5999755859375" layoutX="179.0" layoutY="157.0" stroke="#defee6" strokeLineCap="ROUND" strokeWidth="4.5" />
                   <ScrollPane hbarPolicy="NEVER" layoutX="17.0" layoutY="174.0" prefHeight="320.0" prefWidth="362.0" styleClass="user_listScrollPane" stylesheets="@../assets/style/nabilStyle.css">
                      <content>

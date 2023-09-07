@@ -260,7 +260,7 @@
             </TextField>
          </children>
       </VBox>
-      <VBox prefHeight="102.0" prefWidth="570.0">
+      <VBox onMouseDragged="#getFxmlToLoad" prefHeight="102.0" prefWidth="570.0">
          <padding>
             <Insets left="16.0" right="16.0" />
          </padding>

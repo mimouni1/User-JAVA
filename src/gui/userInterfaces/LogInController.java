@@ -114,9 +114,11 @@ public class LogInController implements Initializable {
 
                         return;
                     } else if (user.getIsVerified()) {
+                        System.out.println("logged in");
                         TrayNotificationAlert.notif("Login", "logged in successfully.",
                                 NotificationType.SUCCESS, AnimationType.POPUP, Duration.millis(2500));
                         UserSession.getInstance().setEmail(user.getEmail());
+                        user.setState(true);
                         
                         if (user.getRoles().equals("[\"ROLE_USER\"]"))
                                {
@@ -227,7 +229,7 @@ public class LogInController implements Initializable {
             e.printStackTrace();
         }
 
-        Desktop.getDesktop().browse(new URI("http://localhost/zeroWateSignIn/"));
+        Desktop.getDesktop().browse(new URI("http://localhost/register/"));
         Parent root = FXMLLoader.load(getClass().getResource("GoogleAuth.fxml"));
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

@@ -55,7 +55,7 @@
   -fx-text-fill: #ff7301;
   -fx-font-weight: 600;
   -fx-font-size: 14px;
-  -fx-prompt-text-fill: hsl(248, 94%, 21%);
+  -fx-prompt-text-fill: rgb(17, 3, 104);
 }
 .SignUp__input--email {
   -fx-background-image: url("../img/emailIcon.png");

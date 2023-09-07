@@ -85,6 +85,7 @@ public class SignUpController {
         if (UserInputValidation.signUpValidator(user, repassField.getText(),
                 userService)) {
             user.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt()));
+            user.setState(true);
             int code = new Random().nextInt(900000) + 100000;
             user.setVerificationCode(code);
             user.setRoles("[\"ROLE_USER\"]");

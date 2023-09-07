@@ -133,11 +133,6 @@
       </VBox>
       <HBox alignment="CENTER_RIGHT" layoutX="250.0" prefHeight="78.0" prefWidth="1115.0">
          <children>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="nav-user-fullname" text="Dashboard" translateX="-690.0">
-               <font>
-                  <Font name="Montserrat ExtraBold" size="18.0" />
-               </font>
-            </Text>
             <HBox fx:id="navBarLogout" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#logout" prefHeight="50.0" prefWidth="50.0" styleClass="nav-icon">
                <children>
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
@@ -174,7 +169,7 @@
                   <Insets right="16.0" />
                </HBox.margin>
             </HBox>
-            <Text fx:id="navFullname" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="nav-user-fullname" text="Braiek Ali">
+            <Text fx:id="navFullname" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="nav-user-fullname" text="Ikbel Mimouni">
                <font>
                   <Font name="Montserrat Bold" size="18.0" />
                </font>
@@ -198,7 +193,7 @@
                         <Insets right="8.0" />
                      </HBox.margin>
                   </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="home__msg__text" text="Hello Ikbel admin, Are you ready to help people and the nature again ?" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="home__msg__text" text="Hello Admin, Are you ready for the latest updates ?" />
                </children>
             </HBox>
             <HBox fx:id="chartContainer" layoutX="22.0" layoutY="92.0" />
